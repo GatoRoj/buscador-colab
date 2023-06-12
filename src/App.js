@@ -13,7 +13,7 @@ export default function App() {
     console.log(listaColab);
   };
   const handlerSearchNavbar = (listafilter) => {
-    const newLista = listafilter.length == 0 ? lista : listafilter;
+    const newLista = listafilter.length === 0 ? lista : listafilter;
     setListaColab([...newLista]);
     console.log(listafilter);
   };
