@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
+import NavBar from "./components/NavBar/NavBar";
+import { lista } from "./Lista";
+import React, { useState } from "react";
+import ListWorker from "./components/ListWorker/ListWorker";
+import FormAddWorker from "./components/FormAddWorker/FormAddWorker";
 
-function App() {
+export default function App() {
+  const [listaColab, setListaColab] = useState(lista);
+
+  const handlerClickAdd = (e) => {
+    setListaColab([...listaColab, { id: listaColab.length + 1, ...e }]);
+    console.log(listaColab);
+  };
+  const handlerSearchNavbar = (listafilter) => {
+    const newLista = listafilter.length == 0 ? lista : listafilter;
+    setListaColab([...newLista]);
+    console.log(listafilter);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="navbar">
+        <h2>Buscador de colaboradores</h2>
+        <NavBar
+          onChangeNavbar={(e) => handlerSearchNavbar(e)}
+          lista={listaColab}
+        />
+      </div>
+      <FormAddWorker onClickAddWorker={(e) => handlerClickAdd(e)} />
+      <ListWorker lista={listaColab} />
     </div>
   );
 }
-
-export default App;

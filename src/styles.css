@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.navbar {
+  height: 5em;
+  background: #202529;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar h2 {
+  margin: 1em;
+  color: white;
+  line-height: 20px;
+}
+
+.navbar input {
+  margin: 1.5em;
+  padding-left: 1em;
+  border-radius: 5px;
+}
+
+.form {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+}
+
+.text_form {
+  text-align: start;
+  padding-left: 0.6em;
+}
+
+.form_input {
+  margin: 0.5em;
+  width: 95%;
+  outline: none;
+  border: 1px solid #e9e9ed;
+  padding: 0.4rem;
+  font-size: 15px;
+  border-radius: 0.3em;
+}
+
+.form button {
+  margin: 0.5em;
+  margin-top: 1em;
+  width: 200px;
+  outline: none;
+  border: 1px solid #e9e9ed;
+  padding: 0.4rem;
+  font-size: 15px;
+  border-radius: 0.3em;
+  color: white;
+  background-color: #1c4efd;
+  cursor: pointer;
+}
+
+.lista {
+  margin-left: 1em;
+}
+
+.lista h1 {
+  text-align: start;
+  margin-left: 0.2em;
+}
+
+.lista td {
+  color: #636363;
+  border: 1px solid #dddfe1;
+  padding: 15px;
+}
